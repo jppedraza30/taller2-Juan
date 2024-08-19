@@ -23,7 +23,9 @@ prob.solve()
 
 print("Status: ", lp.LpStatus[prob.status])
 
-print("Utilidad: ", lp.value(prob.objective))
+print("Ganancia: ", lp.value(prob.objective))
+
+print("Las ganancias se han maximizado")
 
 for v in prob.variables():
     print(v, ": ", lp.value(v))
