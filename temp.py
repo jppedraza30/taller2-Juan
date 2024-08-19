@@ -26,6 +26,7 @@ print("Estado: ", lp.LpStatus[prob.status])
 print("Ganancia: ", lp.value(prob.objective))
 
 print("Las ganancias se han maximizado")
+print("Las ganancias se muestran en pesos colombianos")
 
 for v in prob.variables():
     print(v, ": ", lp.value(v))
