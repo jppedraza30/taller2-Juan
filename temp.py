@@ -1,6 +1,6 @@
 """"Resolver problema del taller de Camilo."""
 
-import pulp as lp
+import pulp as lp 
 
 x_1 = lp.LpVariable(name="metros_poli",
                     lowBound=0,
@@ -21,7 +21,7 @@ prob += 2 * x_1 + x_2 <= 100, "No_ecceder_horas_tintado"
 prob += 3 * x_1 + 2 * x_2, "Maximizar_los_ingresos"
 prob.solve()
 
-print("Status: ", lp.LpStatus[prob.status])
+print("Estado: ", lp.LpStatus[prob.status])
 
 print("Ganancia: ", lp.value(prob.objective))
 
